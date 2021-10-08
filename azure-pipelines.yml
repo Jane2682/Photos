@@ -17,7 +17,7 @@ steps:
 
 - task: AzureFunctionApp@1
   inputs:
-    azureSubscription: 'Microsoft Azure Sponsorship(61decfc3-854a-4ab6-a0c8-d0c7a88bd0a9)'
+    azureSubscription: 'Microsoft Azure Sponsorship(9bfaa65e-c463-4fd5-ad40-c0d48bc16170)'
     appType: 'functionAppLinux'
     appName: 'thefunctionslinux2'
     package: '$(Build.ArtifactStagingDirectory)/Output/Photos.zip'
