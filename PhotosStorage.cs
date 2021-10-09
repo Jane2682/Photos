@@ -1,16 +1,12 @@
+using Microsoft.Azure.Storage.Blob;
+using Microsoft.Azure.WebJobs;
+using Microsoft.Azure.WebJobs.Extensions.DurableTask;
+using Microsoft.Extensions.Logging;
+using Photos.Models;
 using System;
 using System.IO;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Azure.WebJobs;
-using Microsoft.Azure.WebJobs.Extensions.Http;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
-using Microsoft.Azure.Storage.Blob;
-using Photos.Models;
-using Photos.AnalyzerService.Abstractions;
-using Microsoft.Azure.WebJobs.Extensions.DurableTask;
+
 
 namespace Photos
 {
@@ -48,6 +44,7 @@ namespace Photos
 
             var cloudBlockBlob = blobContainer.GetBlockBlobReference(blobName);// izmantojam metodi BlobReference
                                                                                // lai sanemt referenci uz Blob konteineri un pieskirt tam nosaukumu, saglabajam to cloudBlockBlob mainigaja
+
 
 
             var photoBytes = Convert.FromBase64String(request.Photo);//tiek veidots mainigais photoBytes,
